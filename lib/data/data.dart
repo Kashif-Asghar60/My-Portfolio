@@ -5,7 +5,7 @@ import 'package:portfolio/models/project_model.dart';
 Color kGradient1 = Color.fromRGBO(21, 120, 120, 1);
 Color kGradient2 = Color.fromARGB(255, 20, 104, 129);
 
-String imagePath = "images/profile-picc.png";
+String imagePath = "assets/images/profile-picc.png";
 
 //String data to modify
 String name = "Kashif Asghar";
@@ -47,23 +47,24 @@ All users can chat one to one or can have a group chat.
 Every user can set up his own profile.
 
 ''',
-      link: "https://github.com/Kashif-Asghar60/Workplace-Administration",
-      projectimg: "images/workplace_main.jpg"),
+      link:
+          "https://github.com/Kashif-Asghar60/Workplace-Administration-as-Showcase/blob/main/README.md",
+      projectimg: "assets/images/workplace_main.jpg"),
   Project(
       name: "Personal Expense App",
       description: "A App where user can track his/her weekly expense.",
-      projectimg: "images/personal_expense.png",
+      projectimg: "assets/images/personal_expense.png",
       link:
           "https://github.com/Kashif-Asghar60/Personal_Expense_App_with_Flutter"),
   Project(
       name: "To-Do App",
       description: "App to manage daily tasks",
-      projectimg: "images/todo.png",
+      projectimg: "assets/images/todo.png",
       link:
           "https://github.com/Kashif-Asghar60/To-Do-List-App-in-Flutter----State-Management"),
   Project(
       name: "Flutter Portfolio",
       description: "My Portfolio project",
-      projectimg: "images/portfolio.png",
-      link: "https://github.com/Kashif-Asghar60/flutter-portfolio-personal")
+      projectimg: "assets/images/portfolio.png",
+      link: "https://github.com/Kashif-Asghar60/My-Portfolio")
 ];

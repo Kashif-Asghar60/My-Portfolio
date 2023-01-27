@@ -21,42 +21,50 @@ class ProjectWidget extends StatelessWidget {
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
                     children: [
-                      CircleAvatar(
-                        radius: 30,
-                        backgroundImage: AssetImage(projectData.projectimg),
+                      Expanded(
+                        flex: 1,
+                        child: CircleAvatar(
+                          radius: 35,
+                          backgroundImage: AssetImage(projectData.projectimg),
+                        ),
                       ),
                       const SizedBox(
                         width: 10,
                       ),
-                      Text(
-                        projectData.name,
-                        style: kSectionTitleText,
+                      Expanded(
+                        flex: 3,
+                        child: Text(
+                          projectData.name,
+                          style: kSectionTitleText,
+                        ),
+                      ),
+                      const Spacer(),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(10, 10, 0, 10),
+                          child: ElevatedButton(
+                            onPressed: () async {
+                              //Launch project on GitHub
+                              final Uri _url = Uri.parse(projectData.link);
+                              await launchUrl(_url);
+                            },
+                            child: Text(
+                              "View Project",
+                              style:
+                                  kSubTitleText.copyWith(color: Colors.white),
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
                 ),
+                Divider(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Text(projectData.description,
                       overflow: TextOverflow.visible),
-                ),
-                Divider(),
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: ElevatedButton(
-                      onPressed: () async {
-                        //Launch project on GitHub
-                        final Uri _url = Uri.parse(projectData.link);
-                        await launchUrl(_url);
-                      },
-                      child: Text(
-                        "View Project",
-                        style: kSubTitleText.copyWith(color: Colors.white),
-                      ),
-                    ),
-                  ),
                 ),
               ]),
         ),

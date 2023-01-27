@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Color kGrey = const Color(0xFF334055);
+Color kGrey = Color.fromARGB(255, 9, 94, 85);
 Color kPrimaryColor = const Color(0xFF334055);
 Color kWhite = Colors.white;
 Color kBlack = Colors.black;
